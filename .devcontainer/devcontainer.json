@@ -1,18 +1,14 @@
 {
-	"image": "mcr.microsoft.com/devcontainers/python:0-3.11",
-	"waitFor": "onCreateCommand",
-	"onCreateCommand": "pip3 install --user -r requirements.txt",
-	"postCreateCommand": "",
-	"customizations": {
-	  "vscode": {
-		"extensions": [
-		  "ms-toolsai.jupyter",
-		  "ms-python.python",
-		  "ms-python.pylint"
-		]
-	  }
-	}
+  "name": "Python 3.11",
+  "image": "mcr.microsoft.com/devcontainers/python:0-3.11",
+  "onCreateCommand": "pip3 install --user -r requirements.txt",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-toolsai.jupyter",
+        "ms-python.python",
+        "ms-python.pylint"
+      ]
+    }
   }
-RUN rm -f /etc/apt/sources.list.d/yarn.list \
-	&& apt-get update \
-	&& export DEBIAN_FRONTEND=noninteractive
+}
